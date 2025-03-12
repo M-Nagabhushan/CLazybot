@@ -1,22 +1,22 @@
 import streamlit as st
 import pandas as pd
-from docx import Document as Dip
-import fitz
-from dotenv import load_dotenv
 import google.generativeai as genai
 from langchain.prompts import ChatPromptTemplate, PromptTemplate
 from langchain_core.output_parsers import StrOutputParser
 from langchain_core.runnables import RunnablePassthrough
-import pyttsx3
+from langchain.text_splitter import RecursiveCharacterTextSplitter
 import speech_recognition as sr
 from langchain.vectorstores import FAISS
-from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain_community.embeddings import OllamaEmbeddings
 from langchain.docstore.document import Document
 from langchain.retrievers.multi_query import MultiQueryRetriever
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain.memory import ConversationBufferMemory
 from langchain.chains import ConversationChain
+from docx import Document as Dip
+import fitz
+from dotenv import load_dotenv
+import pyttsx3
 import time
 import os
 import base64
